@@ -1,0 +1,8 @@
+module github.com/app
+
+go 1.22.1
+
+require (
+	golang.org/x/mod v0.17.0 // indirect
+	golang.org/x/tools v0.20.0 // indirect
+)
