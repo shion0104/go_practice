@@ -1,0 +1,14 @@
+version: '3' # composeファイルのバージョン
+services:
+  go-practice: # サービス名
+    container_name: go-practice
+    build: # ビルドに使うDockerファイルのパス
+      context: .
+      dockerfile: ./build/Dockerfile
+    volumes: # マウントディレクトリ
+      - ./go-practice:/go/src/github.com/go-practice
+    tty: true # コンテナの永続化
+    env_file: # .envファイル
+      - ./build/.go_env
+    environment:
+      - TZ=Asia/Tokyo
