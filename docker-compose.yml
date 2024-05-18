@@ -26,4 +26,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mysql/db:/var/lib/mysql
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
