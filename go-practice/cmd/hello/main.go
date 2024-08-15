@@ -33,13 +33,15 @@ func main() {
         log.Fatal(pingErr)
     }
 
-	var name string
-	err = db.QueryRow("SELECT name FROM user WHERE id = ?", 1).Scan(&name)
+    var name string
+    err = db.QueryRow("SELECT name FROM user WHERE id = ?", 1).Scan(&name)
 
     fmt.Println("Connected!")
-	if err != nil {
+    if err != nil {
     fmt.Printf("Error while querying user: %v\n", err)
-	} else {
+    } 
+    else 
+    {
     fmt.Printf("ユーザーID1の名前は: %s\n", name)
-	}
+    }
 }
